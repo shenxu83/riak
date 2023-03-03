@@ -12,7 +12,7 @@ cd $RUNNER_BASE_DIR
 SCRIPT="riak-admin"
 
 # Setup required due to relx not node-package
-ERTS_PATH=$BINDIR
+ERTS_PATH="/usr/local/bin/erlang/22.3.4/bin"
 NAME_PARAM="-name"
 BOOT_FILE="start_clean"
 

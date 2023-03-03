@@ -30,7 +30,7 @@ if [ "$PLATFORM_PATCH_DIR" = "${PLATFORM_PATCH_DIR#/}" ]; then
 fi
 
 ERTS_VER=$(cd ${PLATFORM_BASE_DIR} && ls -d erts-*)
-ERTS_PATH="${PLATFORM_BASE_DIR}/$ERTS_VER/bin"
+ERTS_PATH="/usr/local/bin/erlang/riak-3.0.10/bin"
 COOKIE=`egrep '^[ \t]*distributed_cookie[ \t]*=[ \t]*' $PLATFORM_ETC_DIR/riak.conf 2> /dev/null | cut -d = -f 2 | tr -d ' '`
 
 NODE=`egrep '^[ \t]*nodename[ \t]*=[ \t]*' $PLATFORM_ETC_DIR/riak.conf 2> /dev/null | cut -d = -f 2 | tr -d ' '`
